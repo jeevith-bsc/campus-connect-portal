@@ -1,0 +1,434 @@
+:root {
+    --primary-green: #0d5c3a;
+    --accent-green: #107c41;
+
+    --student-color: #2e7d32;
+    --faculty-color: #1565c0;
+    --admin-color: #6a1b9a;
+
+    --bg-light: #f8fafc;
+}
+
+
+/* General */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: white;
+    color: #333;
+}
+
+
+/* Navbar */
+
+.navbar {
+    padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-badge {
+    background: var(--primary-green);
+    color: white;
+
+    font-weight: bold;
+
+    padding: 10px 13px;
+
+    border-radius: 50%;
+}
+
+.university-name {
+    font-weight: 800;
+    color: var(--primary-green);
+}
+
+.sub-dept {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 8px 18px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background: var(--primary-green);
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid var(--primary-green);
+    color: var(--primary-green);
+}
+
+
+/* Hero */
+
+.hero-banner {
+    background: linear-gradient(
+        135deg,
+        var(--primary-green),
+        #0f4517
+    );
+
+    color: white;
+
+    padding: 3.5rem 1rem;
+
+    text-align: center;
+}
+
+.module-tag {
+    background: rgba(116, 201, 152, 0.47);
+
+    padding: 4px 12px;
+
+    border-radius: 4px;
+
+    font-size: 0.8rem;
+}
+
+.hero-banner h1 {
+    font-size: 2.5rem;
+
+    margin: 1rem 0 0.5rem;
+
+    color: #b9ffd2;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+
+    opacity: 0.9;
+
+    max-width: 600px;
+
+    margin: 0 auto 1.5rem;
+}
+
+.hero-cta-group {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.btn-hero-primary {
+    background-color: white;
+
+    color: var(--primary-green);
+
+    padding: 10px 22px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+/* Sections */
+
+.section-container {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 3rem 1rem;
+
+    text-align: center;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+
+    max-width: none;
+}
+
+.section-title {
+    color: var(--primary-green);
+
+    font-size: 1.8rem;
+
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: #64748b;
+
+    margin-bottom: 2rem;
+}
+
+
+/* Carousel */
+
+.carousel-wrapper {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.carousel-track-container {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.carousel-track {
+    width: 100%;
+}
+
+.slide {
+    display: none;
+
+    position: relative;
+}
+
+.slide.active-slide {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+.slide-caption {
+    position: absolute;
+    left:0;
+    right:0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* Carousel Buttons */
+
+.carousel-btn {
+    background: var(--primary-green);
+
+    color: white;
+
+    border: none;
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* Carousel Dots */
+
+.carousel-dots {
+    margin-top: 15px;
+}
+
+.carousel-wrapper {
+    position:relative;
+    max-width:900px;
+    margin :0 auto;
+    overflow:hidden;
+    border-readius:12px;
+
+}
+.carousel-track {
+    display:flex;
+    transition:transform 0.5s ease-in-out;
+}
+
+.dot {
+    display: inline-block;
+
+    width: 10px;
+
+    height: 10px;
+
+    background: #ccc;
+
+    border-radius: 50%;
+
+    margin: 5px;
+
+    cursor: pointer;
+}
+
+.active-dot {
+    background: var(--primary-green);
+}
+
+
+/* Role Cards */
+
+.roles-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+
+    gap: 20px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.role-card {
+    background: white;
+
+    padding: 2rem 1.5rem;
+
+    border-radius: 10px;
+
+    border-top: 5px solid;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    text-align: left;
+}
+
+.student-border {
+    border-color: var(--student-color);
+}
+
+.faculty-border {
+    border-color: var(--faculty-color);
+}
+
+.admin-border {
+    border-color: var(--admin-color);
+}
+
+
+/* Icons */
+
+.role-icon {
+    font-size: 2rem;
+
+    margin-bottom: 0.5rem;
+}
+
+
+/* Features */
+
+.feature-bullets {
+    list-style: none;
+
+    margin: 1.2rem 0;
+
+    color: #64748b;
+}
+
+.feature-bullets li {
+    padding: 6px 0;
+}
+
+
+/* Portal Buttons */
+
+.btn-portal {
+    width: 100%;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.student-bg {
+    background-color: var(--student-color);
+}
+
+.faculty-bg {
+    background-color: var(--faculty-color);
+}
+
+.admin-bg {
+    background-color: var(--admin-color);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .hero-banner h1 {
+        font-size: 2rem;
+    }
+
+    .roles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .slide img {
+        height: 300px;
+    }
+}
